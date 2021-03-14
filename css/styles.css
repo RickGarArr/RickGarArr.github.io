@@ -1,0 +1,227 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1e1e1e;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: white;
+    line-height: 1.2;
+}
+p {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* ==========================================================================
+    globales
+========================================================================== */
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, a {
+    font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px 0;
+}
+
+.section {
+    margin: 1.8rem 0;
+}
+
+#barra {
+    height: 8px;
+    width: 100%;
+    background-color: #ff4800;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.parallax::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.5);
+    -webkit-filter: brightness(0.5);
+    z-index: 500;
+}
+
+/* ==========================================================================
+    header
+========================================================================== */
+
+.site-header {
+    color: white;
+}
+
+.site-hero {
+    position: relative;
+    background-image: url(../img/site-hero.jpg);
+    height: 100vh;
+    min-height: 640px;
+    background-position: center center;
+    background-size: cover;
+    filter: brightness(0.3);
+}
+
+div.contenido-header {
+    padding-top: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+nav.nav-header {
+    text-align: right;
+    width: 100%;
+}
+
+nav.nav-header a {
+    color: white;
+    font-size: 2rem;
+    margin-right: 16px;
+    text-transform: capitalize;
+    transition: all .2s ease-in-out;
+}
+
+nav.nav-header a:hover {
+    color: #ff4800;
+    text-shadow: 0 0 10px black;
+}
+
+nav.nav-header a:last-of-type {
+    margin: 0;
+}
+
+/* ------------------------------------------------------------------------------------------ // Contenido Header // */
+
+.contenido-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 60%;
+}
+
+div.info h1 {
+    font-size: 8vw;
+    margin: 0;
+    margin-top: 2.4rem;
+    text-transform: uppercase;
+    line-height: .7;
+    text-align: center;
+}
+
+div.info h1 span {
+    font-weight: 300;
+}
+
+/* ------------------------------------------------------------------------------------------ // Sobre Mi // */
+
+div.informacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.informacion div.perfil {
+    flex-basis: calc(25% - 1rem);
+}
+
+div.informacion div.perfil img {
+    border: 2px solid #ff4800;
+    border-radius: 50%;
+}
+
+div.informacion div.descripcion {
+    flex-basis: calc(75% - 1rem);
+    padding-left: 2rem;
+}
+
+div.descripcion p {
+    padding: 4px 16px;
+}
+
+/* ------------------------------------------------------------------------------------------ // Conocimientos // */
+
+section.conocimientos {
+    position: relative;
+    height: auto;
+}
+
+section.conocimientos::before {
+    content: '';
+    background-image: url(../img/hero.jpg);
+    filter: grayscale(.5);
+    filter: brightness(0.3);
+    z-index: -1;
+}
+
+.contenido-habilidades ul li p {
+    text-transform: capitalize;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.galeria .habilidad img {
+    transform: scale(0.8);
+    filter: grayscale(0.7);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.galeria .habilidad img:hover {
+    filter: grayscale(0);
+    transform: scale(1);
+}
