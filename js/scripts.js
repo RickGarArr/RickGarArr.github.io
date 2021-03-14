@@ -3,11 +3,24 @@ $(document).ready(()=>{
     $(window).resize(()=>{
         myOverflow();
     });
+
+    $(window).on("orientationchange",()=>{
+        myOverflow();
+    });
+
+    $('.nav-header a').each((i, a) => {
+        a.addEventListener('click', (e)=>{
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $(`${e.target.getAttribute('href')}`).offset().top - 24
+            }, 200);
+        });
+    });
 });
 
 function myOverflow() {
     let scrollHeight = $(document).height() - $(window).height(); // 1328 - 100 ; x - 1
-    let value = parseFloat(100 / scrollHeight);
+    let value = parseFloat(101 / scrollHeight);
     $(window).scroll(()=>{
         let scroll = parseInt($(window).scrollTop());
         if (scroll == scrollHeight) {
@@ -16,7 +29,7 @@ function myOverflow() {
             }); 
         }
         $('#barra').css({
-            'width': `${parseInt(scroll * value + 0.001)}% `
+            'width': `${parseInt(scroll * value)}% `
         });
     });
 }
