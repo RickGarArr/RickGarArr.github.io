@@ -82,7 +82,7 @@ a {
 
 #barra {
     height: 8px;
-    width: 100%;
+    width: 0%;
     background-color: #ff4800;
     position: fixed;
     top: 0;
@@ -252,7 +252,7 @@ section.conocimientos::before {
 
 .galeria {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
