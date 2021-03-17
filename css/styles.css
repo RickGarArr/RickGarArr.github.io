@@ -153,17 +153,18 @@ nav.nav-header a {
     margin-bottom: 16px;
 }
 
+nav.nav-header a:hover {
+    color: #ff4800;
+    text-shadow: 0 0 10px black;
+    transform: scale(1.1);
+}
+
 @media only screen and (min-width:640px) {
     nav.nav-header a {
         font-size: 2rem;
         margin-right: 16px;
-        display: inline;
+        display: inline-block;
     }    
-}
-
-nav.nav-header a:hover {
-    color: #ff4800;
-    text-shadow: 0 0 10px black;
 }
 
 nav.nav-header a:last-of-type {
