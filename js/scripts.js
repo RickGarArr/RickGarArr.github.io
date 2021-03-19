@@ -9,12 +9,14 @@ $(document).ready(()=>{
     });
 
     $('.nav-header a').each((i, a) => {
-        a.addEventListener('click', (e)=>{
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: $(`${e.target.getAttribute('href')}`).offset().top - 24
-            }, 200);
-        });
+        if (i != 4) {   
+            a.addEventListener('click', (e)=>{
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $(`${e.target.getAttribute('href')}`).offset().top - 24
+                }, 200);
+            });
+        }
     });
 });
 
