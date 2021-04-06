@@ -92,7 +92,7 @@ function fadeIn() {
         const scrollBottom = $(window).scrollTop();
         elements.each((i) => {
             const element = elements.eq(i);
-            const altura = element.offset().top - $(window).height() / 2;
+            const altura = element.offset().top - $(window).height() * .8;
             if ( scrollBottom >= altura) {
                 element.removeClass('inicio');
                 element.addClass('fade_in');
