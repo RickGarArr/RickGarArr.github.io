@@ -8,6 +8,7 @@ $(document).ready(function() {
     animate_text();
     navbar_scroll();
     fadeIn();
+    menu_movil();
 
     $(window).load('body', function(){
         setTimeout(()=>{
@@ -97,5 +98,13 @@ function fadeIn() {
                 element.addClass('fade_in');
             }    
         });
+    });
+}
+
+function menu_movil() {
+    "use strict";
+    $('#menu-movil').click(function(e) {
+        e.preventDefault();
+        $('.right').slideToggle();
     });
 }
