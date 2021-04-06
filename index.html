@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.png" type="image/pnggi">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -16,22 +16,36 @@
 </head>
 
 <body>
-    <span id="barra"></span>
+    <div class="preloader" id="preloader">
+        <div class="spinner-wrap">
+            <div class="spinner"></div>
+        </div>
     
+        <div class="left-side"></div>
+        <div class="right-side"></div>
+    </div>
     <header class="site-header">
         <div class="site-hero"></div>
-        <div class="contenido-header contenedor">
-            <nav class="nav-header">
+        <nav class="nav-header">
+            <div class="left">
+                <a href="https://github.com/RickGarArr"><i class="fab fa-github"></i> Github</a>
+                <a href="https://www.linkedin.com/in/ricardo-garcia-40ab811b2/"><i class="fab fa-linkedin"></i> Linkedin</a>
+            </div>
+            <div class="rigth">
                 <a href="#sobre-mi">acerca de mi</a>
                 <a href="#conocimientos">conocimientos</a>
                 <a href="#habilidades">habilidades</a>
                 <a href="#contacto">contacto</a>
-                <a href="https://github.com/RickGarArr"><i class="fab fa-github"></i> Github</a>
-            </nav>
-            <div class="info">
-                <h1>Ricardo <span>Garcia</span></h1>
-                <h1><small><span>Desarrollador </span>JR</small></h1>
             </div>
+        </nav>
+        <div class="contenido-header contenedor">
+            <div class="info">
+                <h1>Ricardo <span><strong>Garcia</strong></span></h1>
+                <h1 class="animate_text"><span>Desarrollador JR</span></h1>
+            </div>
+        </div>
+        <div class="arrow-wrap bounce anchor">
+            <a href="#sobre-mi"><i class="fa fa-arrow-down"></i></a>
         </div>
     </header>
     
@@ -47,6 +61,9 @@
                     <p>Durante mi formación profesional adquirí conocimientos como lógica de programación, creación y administración de bases de datos relacionales, desarrollo WEB y de aplicaciones Moviles entre otros.</p>
                     <p>Actualmente estoy ampliando mis conocimientos de programación y desarrollo de software.</p>
                 </div>
+            </div>
+            <div class="boton">
+                <a class="btn-descargar" href="./files/Currículum_Ricardo_Garcia_Arreola.pdf" download="Currículum_Ricardo_Garcia_Arreola.pdf">Descargar CV</a>
             </div>
         </div>
     </main>
@@ -126,6 +143,7 @@
         </nav>
     </footer>
     <script src="./js/jquery.js"></script>
+    <script src="./js/plugins.js"></script>
     <script src="./js/scripts.js"></script>
 </body>
 
