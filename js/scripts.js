@@ -7,6 +7,7 @@ $(document).ready(function() {
     arrow_click();
     animate_text();
     navbar_scroll();
+    fadeIn();
 
     $(window).load('body', function(){
         setTimeout(()=>{
@@ -34,7 +35,14 @@ function animate_text() {
     "use strict";
     const animatedText = $('.animate_text span');
     animatedText.typed({
-        strings: ["Desarrollador <strong>Web</strong>", "<strong>Front</strong>End", "Back<strong>End</strong>"],
+        strings: [
+            "Desarrollador <strong>Web</strong>",
+            "<strong>Front</strong>End",
+            "Back<strong>End</strong>",
+            "Angular",
+            "NodeJS",
+            "GitHub",
+        ],
         loop: true,
         startDelay: 500,
         backDelay: 1000,
@@ -66,5 +74,28 @@ function navbar_scroll() {
         } else {
             navBar.removeClass('animate');
         }
+    });
+}
+
+function fadeIn() {
+    "use strict";
+    
+    const elements = $('.fade_in');
+
+    elements.each((i) => {
+        elements.eq(i).addClass('inicio');
+        elements.eq(i).removeClass('fade_in');
+    });
+
+    $(window).on('scroll', function() {
+        const scrollBottom = $(window).scrollTop();
+        elements.each((i) => {
+            const element = elements.eq(i);
+            const altura = element.offset().top - $(window).height() / 2;
+            if ( scrollBottom >= altura) {
+                element.removeClass('inicio');
+                element.addClass('fade_in');
+            }    
+        });
     });
 }

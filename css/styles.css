@@ -75,14 +75,37 @@ body {
     0%, 20%, 50%, 80%, 100% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
+        color: white;
     }
     40% {
         -webkit-transform: translateY(-30px);
         transform: translateY(-30px);
+        color: #ff4800;
     }
     60% {
         -webkit-transform: tran slateY(-15px);
         transform: translateY(-15px);
+    }
+}
+
+.fade_in {
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.inicio {
+    visibility: hidden;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(120px);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
     }
 }
 
@@ -145,8 +168,8 @@ a {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    filter: brightness(0.5);
     -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
     z-index: 500;
 }
 
@@ -410,14 +433,15 @@ div.descripcion p {
 .boton .btn-descargar::before {
     content: '';
     top: 0;
-    bottom: 0;
+    left: 0;
+    /* bottom: 0; */
     width: 0%;
+    height: 100%;
     /* transform: translateX(-16%); */
     background-color: #ff4800;
     position: absolute;
     z-index: -1;
     transition: all .2s ease;
-    margin-left: -14%;
 }
 
 .boton .btn-descargar:hover {
