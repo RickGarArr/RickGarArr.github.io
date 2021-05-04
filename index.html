@@ -9,6 +9,7 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/animations.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -35,16 +36,17 @@
 
             <div class="left">
                 <a href="https://github.com/RickGarArr"><i class="fab fa-github"></i> Github</a>
-                <a href="https://www.linkedin.com/in/ricardo-garcia-40ab811b2/"><i class="fab fa-linkedin"></i> Linkedin</a>
+                <a href="https://www.linkedin.com/in/ricardo-garcia-40ab811b2/"><i class="fab fa-linkedin"></i>
+                    Linkedin</a>
             </div>
-            
+
             <div class="right">
                 <a href="#sobre-mi">acerca de mi</a>
                 <a href="#conocimientos">conocimientos</a>
                 <a href="#habilidades">habilidades</a>
                 <a href="#contacto">contacto</a>
             </div>
-            
+
             <button type="button" id="menu-movil">
                 <i class="fa fa-bars"></i>
             </button>
@@ -85,40 +87,11 @@
         </div>
     </main>
 
-    <section id="conocimientos" class="conocimientos parallax">
+    <!-- <section id="conocimientos" class="conocimientos parallax">
         <div class="contenedor fade_in">
             <h2>Mis Conocimientos</h2>
-            <div class="galeria">
-                <div class="habilidad">
-                    <img src="./img/html5.png" alt="logo de html5">
-                </div>
-                <div class="habilidad">
-                    <img src="./img/css3.png" alt="logo de ccs3">
-                </div>
-                <div class="habilidad">
-                    <img src="./img/js.png" alt="logo de javascript">
-                </div>
-                <div class="habilidad">
-                    <img src="./img/Jquery.png" alt="logo de jquery">
-                </div>
-                <div class="habilidad">
-                    <img src="./img/angular.png" alt="logo de angular">
-                </div>
-                <div class="habilidad">
-                    <img src="./img/ionic.png" alt="logo de ionic">
-                </div>
-                <div class="habilidad">
-                    <img src="./img/nodejs.png" alt="logo de nodeajs">
-                </div>
-                <div class="habilidad">
-                    <img src="./img/C-Sharp.png" alt="logo de csharp">
-                </div>
-                <div class="habilidad">
-                    <img src="./img/java.png" alt="logo de java">
-                </div>
-            </div>
         </div>
-    </section>
+    </section> -->
 
     <div id="habilidades" class="habilidades">
         <div class="contenedor contenido-habilidades fade_in">
@@ -153,6 +126,140 @@
                     <p>Usar el patrón MVC para desarrollar aplicaciones</p>
                 </li>
             </ul>
+        </div>
+    </div>
+
+    <div id="portafolio">
+        <div class="contenedor fade_in">
+            <h2>portafolio</h2>
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fab fa-react spin icon-blue"></i>
+                            <h3 class="card-title">ReactJS</h3>
+                        </div>
+                        <div class="card-description">
+                            <div class="descripcion">
+                                <p>Interfáz basica de un buscador de personal</p>
+                            </div>
+                            <div class="tecnologias">
+                                <p>HTML, CSS, JavaScript, Fetch y Axios</p>
+                            </div>
+                        </div>
+                        <a href="https://github.com/RickGarArr/ReactJS-buscador_local" target="_blank" class="btn-ver-mas">Ver Mas</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fab fa-node-js spin icon-green"></i>
+                            <h3 class="card-title">NodeJS</h3>
+                        </div>
+                        <div class="card-description">
+                            <div class="descripcion">
+                                <p>Jsonwebtoken</p>
+                                <p>Multer</p>
+                                <p>BCrypt</p>
+                                <p>Express-validator</p>
+                                <p>MySQL</p>
+                                <p>TypeScript</p>
+                            </div>
+                            <div class="tecnologias">
+                                <p>Backend en express y MySQL, control de acceso, subida y validación de archivos,
+                                    encriptacion de password, pool de conexiones a MySQL</p>
+                            </div>
+                        </div>
+                        <a class="btn-ver-mas">Ver Mas</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fab fa-node-js spin icon-green"></i>
+                            <h3 class="card-title">NodeJS</h3>
+                        </div>
+                        <div class="card-description">
+                            <div class="descripcion">
+                                <p>SocketIO</p>
+                                <p>TypeScript</p>
+                                <p>Express</p>
+                            </div>
+                            <div class="tecnologias">
+                                <p>Backend sencillo de integración de sockets a servidor REST</p>
+                            </div>
+                        </div>
+                        <a class="btn-ver-mas">Ver Mas</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fab fa-angular spin icon-red"></i>
+                            <h3 class="card-title">Angular</h3>
+                        </div>
+                        <div class="card-description">
+                            <div class="descripcion">
+                                <p>SocketIO - client</p>
+                                <p>TypeScript</p>
+                                <p>Express</p>
+                            </div>
+                            <div class="tecnologias">
+                                <p>Frontend sencillo. Integración a servidor de sockets</p>
+                            </div>
+                        </div>
+                        <a class="btn-ver-mas">Ver Mas</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fab fa-java spin icon-orange"></i>
+                            <h3 class="card-title">Java</h3>
+                        </div>
+                        <div class="card-description">
+                            <div class="descripcion">
+                                <p>Servlets</p>
+                                <p>Subida y validación de archivos</p>
+                                <p>Encriptacion de password</p>
+                                <p>Conexión a MySQL</p>
+                                <p>JDBC</p>
+                            </div>
+                            <div class="tecnologias">
+                                <p>Backend en Java y MySQL, subida y validación de archivos,
+                                    manejo de excepciones, encriptacion de password, pool de conexiones a MySQL, Modelos y
+                                    Controladores</p>
+                            </div>
+                        </div>
+                        <a class="btn-ver-mas">Ver Mas</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fab fa-angular spin icon-red"></i>
+                            <h3 class="card-title">Angular</h3>
+                        </div>
+                        <div class="card-description">
+                            <div class="descripcion">
+                                <p>Roles de Usuarios</p>
+                                <p>Subida y validación de archivos</p>
+                            </div>
+                            <div class="tecnologias">
+                                <p>Aplicacion web frontend, integración con servidor java</p>
+                            </div>
+                        </div>
+                        <a class="btn-ver-mas">Ver Mas</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
