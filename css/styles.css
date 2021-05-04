@@ -296,13 +296,13 @@ nav.nav-header a::before {
 
 nav.nav-header a:hover::after,
 nav.nav-header a:hover::before {
-    width: 50%;
+    width: 0;
 }
 
 @media only screen and (min-width:641px){
     nav.nav-header a:hover::after,
     nav.nav-header a:hover::before {
-        width: 0;
+        width: 50%;
     }   
 }
 
