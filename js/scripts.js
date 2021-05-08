@@ -13,7 +13,7 @@ $(document).ready(function() {
     $(window).load('body', function(){
         setTimeout(()=>{
             $('.preloader').addClass('loaded');
-        }, 1500);
+        }, 1000);
     });
 
 });
@@ -41,8 +41,8 @@ function animate_text() {
             "<strong>Front</strong>End",
             "Back<strong>End</strong>",
             "Angular",
-            "NodeJS",
-            "GitHub",
+            "Node<strong>JS</strong>",
+            "<strong>Git</strong>Hub",
         ],
         loop: true,
         startDelay: 500,

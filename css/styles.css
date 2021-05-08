@@ -1,3 +1,12 @@
+:root {
+    --primary: #ff4800;
+    --red: #9d0208;
+    --orange: #dc2f02;
+    --dark-gray: #1e1e1e;
+    --sky-blue: #4cc9f0;
+    --light-green: #52b69a;
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -10,7 +19,7 @@ html {
 }
 
 body {
-    background-color: #1e1e1e;
+    background-color: var(--dark-gray);
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     color: white;
@@ -100,7 +109,7 @@ a {
 #barra {
     height: 8px;
     width: 0%;
-    background-color: #ff4800;
+    background-color: var(--primary);
     position: fixed;
     top: 0;
     left: 0;
@@ -256,7 +265,7 @@ div.contenido-header {
 }
 
 #menu-movil:hover {
-    color: #ff4800;
+    color: var(--primary);
 }
 
 @media only screen and (min-width:641px) {
@@ -272,7 +281,7 @@ nav.nav-header a {
 }
 
 nav.nav-header a:hover {
-    color: #ff4800;
+    color: var(--primary);
 }
 nav.nav-header a::after,
 nav.nav-header a::before {
@@ -280,7 +289,7 @@ nav.nav-header a::before {
     position: absolute;
     top: 0;
     height: 2px;
-    background-color: #ff4800;
+    background-color: var(--primary);
     width: 0%;
     transition: width .3s;
 }
@@ -322,7 +331,7 @@ nav.nav-header {
 }
 
 nav.nav-header.animate {
-    background-color: #1e1e1e;
+    background-color: var(--dark-gray);
     margin: 0;
     box-shadow: 0 10px 24px black;
 }
@@ -388,7 +397,7 @@ div.info span {
 }
 
 div.info strong {
-    color: #ff4800;
+    color: var(--primary);
     font-weight: bold;
 }
 .arrow-wrap {
@@ -412,7 +421,7 @@ div.info strong {
 }
 
 div.informacion div.perfil img {
-    border: 2px solid #ff4800;
+    border: 2px solid var(--primary);
     border-radius: 50%;
 }
 
@@ -458,7 +467,7 @@ div.descripcion p {
     width: 0%;
     height: 100%;
     /* transform: translateX(-16%); */
-    background-color: #ff4800;
+    background-color: var(--primary);
     position: absolute;
     z-index: -1;
     transition: all .2s ease;
@@ -470,6 +479,21 @@ div.descripcion p {
 
 .boton .btn-descargar:hover::before {
     width: 100%;
+}
+
+/* ------------------------------------------------------------------------------------------ // habilidades // */ 
+
+.habilidades {
+    position: relative;
+    height: auto;
+}
+
+.habilidades::before {
+    content: '';
+    background-image: url(../img/hero.jpg);
+    filter: grayscale(.5);
+    filter: brightness(0.3);
+    z-index: -1;
 }
 
 /* ------------------------------------------------------------------------------------------ // Conocimientos // */
@@ -527,11 +551,10 @@ section.conocimientos::before {
     flex-basis: 100%;
     position: relative;
     text-align: center;
-    background-color: #1e1e1e;
+    background-color: var(--dark-gray);
     padding: 3rem 1rem 1rem 1rem;
     margin-bottom: 3.2rem;
     transition: all .2s;
-
 }
 
 @media only screen and (min-width:641px){
@@ -550,6 +573,7 @@ section.conocimientos::before {
     transform: scale(1.02);
     z-index: 3;
 }
+
 
 .card-content {
     height: 100%;
@@ -589,10 +613,11 @@ section.conocimientos::before {
     cursor: pointer;
     transition: background-color .2s;
     text-transform: uppercase;
+    margin-top: 1rem;
 }
 
 .btn-ver-mas:hover {
-    background-color: #ff4800;
+    background-color: var(--primary);
 }
 
 /* ------------------------------------------------------------------------------------------ // card after before // */ 
@@ -604,7 +629,7 @@ section.conocimientos::before {
     height: 2px;
     width: 0;
     transition: width .2s;
-    background-color: #ff4800;
+    background-color: var(--primary);
 }
 
 .card::after { left: 50%; }
@@ -612,6 +637,25 @@ section.conocimientos::before {
 
 .card:hover::after, .card:hover::before {
     width: 50%;
+}
+
+/* ------------------------------------------------------------------------------------------ // card etiqueta // */ 
+ 
+.etiqueta {
+    position: absolute;
+    padding: 1rem;
+    font-size: 1.4rem;
+    top: -5px;
+    right: -5px;
+    z-index: 5;
+}
+
+.etiqueta.green {
+    background-color: var(--light-green);
+}
+
+.etiqueta.blue {
+    background-color: var(--sky-blue);
 }
 
 /* ==========================================================================
@@ -656,17 +700,17 @@ footer.contacto a i.fa-envelope {
 
 
 .icon-blue {
-    color: #4cc9f0;
+    color: var(--sky-blue);
 }
 
 .icon-green {
-    color: #52b69a;
+    color: var(--light-green);
 }
 
 .icon-orange {
-    color: #dc2f02;
+    color: var(--orange);
 }
 
 .icon-red {
-    color: #9d0208;
+    color: var(--red);
 }

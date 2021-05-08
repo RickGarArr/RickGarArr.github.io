@@ -64,7 +64,7 @@
 /* ------------------------------------------------------------------------------------------ // spinner // */ 
 
 .spin {
-    animation: spin 3s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite;
+    animation: spin 3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 @keyframes spin {
